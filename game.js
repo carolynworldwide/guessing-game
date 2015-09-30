@@ -31,4 +31,4 @@ var totalRight = 0;
   
   var closing = alert('Finished! You got ' + totalRight + ' right ' + username);
 
-console.log(totalRight)
+console.log(totalRight);
