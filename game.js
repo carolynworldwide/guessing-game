@@ -10,9 +10,12 @@ var one = document.getElementById('one');
 var two = document.getElementById('two');
 var three = document.getElementById('three');
 
+var questions = ['Did I grow up in the United States?', 'Do I speak German?', 'Have I ever lived in Libya'];
+var answers = ['YES','NO'];
+
 function question1(){
-	question1 = prompt('Did I grow up in the United States?');
-	if (question1.toUpperCase() === 'Y' || question1.toUpperCase() === 'YES') {
+	question1 = prompt(questions[0]);
+	if (question1.toUpperCase() === answers[0] || question1.toUpperCase() === answers[0][0]) {
   		one.innerHTML = 'Right!'
   		//alert('Right!');
   		totalRight++;
@@ -24,8 +27,8 @@ function question1(){
 question1();
 
 function question2(){
-	question2 = prompt('Do I speak German?');
-	if (question2.toUpperCase() === 'N' || question2.toUpperCase() === 'NO') {
+	question2 = prompt(questions[1]);
+	if (question2.toUpperCase() === answers[1] || question2.toUpperCase() === answers[1][0]) {
   		//alert('Correct!');
   		two.innerHTML = 'Correct!'
   		totalRight++;
@@ -37,13 +40,13 @@ function question2(){
 question2();
 
 function question3(){
-	question3 = prompt('Have I ever lived in Libya');
-	if (question3.toUpperCase() === 'Y' || question3.toUpperCase() === 'YES') {
-  		three.innerHTML = 'Indeed!'
+	question3 = prompt(questions[2]);
+	if (question3.toUpperCase() === answers[0] || question3.toUpperCase() === answers[0][0]) {
+  		three.innerHTML = 'Indeed!';
   		//alert('Indeed!');
   		totalRight++;
 	}else {
-		there.innerHTML = 'Actually I did!'
+		three.innerHTML = 'Actually I did!';
   		//alert('Actually I did!');
 	}
 }
